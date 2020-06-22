@@ -1,0 +1,48 @@
+/*
+  Localizable.strings
+  Zagil
+
+  Created by Muhammad Khaliq ur Rehman on 21/01/2020.
+  Copyright © 2020 Muhammad Khaliq ur Rehman. All rights reserved.
+*/
+
+// MARK: - Configuration Manager
+
+"configurations" = "Configurations";
+"plist" = "plist";
+"configurationNotFound" = "Configuratin.plist Not Found. Please Add it in Project to Continue.";
+"dictionaryNotFound" = "Dictionary is Not found in Configuration.plist file.";
+"keyNotFound" = "Key Not Present in Configuration.plist file or may be casting error.";
+
+
+// MARK: - Service Errors
+
+// MARK: Titles
+
+"internetErrorTitle" = "Network unavailable";
+"badRequestErrorTitle" = "Bad Request";
+"authorizationErrorTitle" = "Session Expired";
+"timeoutErrorTitle" = "Timeout";
+"serverErrorTitle" = "Server Error";
+"jsonMappingErrorTitle" = "Parsing Error";
+"codableMappingErrorTitle" = "Mapping Error";
+"badResponseErrorTitle" = "Bad Response";
+"userExistsErrorTitle" = "Error";
+"userNotExistsErrorTitle" = "Error";
+"signoutTitle" = "Signing Out?";
+"signout" = "Sign Out";
+"cancel" = "Cancel";
+
+// MARK: Messages
+
+"internetErrorMessage" = "Network connection error. Please check your settings and try again.";
+"authorizationErrorMessage" = "Your Session has expired. Please Login again.";
+"timeoutErrorMessage" = "Request time out. Please try again.";
+"serverErrorMessage" = "Sorry, we've had a server error. Please try again.";
+"jsonMappingErrorMessage" = "Unable to process server data due to";
+"badResponseErrorMessage" = "Bad response from server.";
+"userExistsErrorMessage" = "User already exist with this email.";
+"userNotExistsErrorMessage" = "User does not exists with this email.";
+"noResultMessage" = "No Result!";
+"shareMessage" = "Check out Zagil app! \n<AppStoreLink Here>";
+"signoutMessage" = "Are you sure to Sign Out.";

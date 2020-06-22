@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UC1-if-JXX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Inbox View Controller-->
+        <scene sceneID="ubx-1R-1be">
+            <objects>
+                <viewController storyboardIdentifier="ZAInboxViewController" id="Xp3-mQ-xkb" customClass="ZAInboxViewController" customModule="Zagil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WFq-sd-HZO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eUY-5I-fya"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ea7-3y-FX3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3I-2R-MgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1099" y="80"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WwN-DJ-aEj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UC1-if-JXX" customClass="ZANavigationController" customModule="Zagil" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="messages_unselected" selectedImage="messages_selected" id="Ivd-za-KHM"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H9X-GO-JnF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xp3-mQ-xkb" kind="relationship" relationship="rootViewController" id="Mdb-NP-3Pm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKI-iw-Mz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311.59420289855075" y="80.357142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="messages_selected" width="26" height="19"/>
+        <image name="messages_unselected" width="26" height="19"/>
+    </resources>
+</document>

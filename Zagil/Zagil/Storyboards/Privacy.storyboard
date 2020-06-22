@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yal-am-UPa">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ooredoo-Bold_gdi.ttf">
+            <string>ooredoo-Bold</string>
+        </array>
+        <array key="ooredoo-Regular_gdi.ttf">
+            <string>ooredoo-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Terms And Conditions View Controller-->
+        <scene sceneID="4Kn-gu-DhK">
+            <objects>
+                <viewController storyboardIdentifier="ZATermsAndConditionsViewController" id="zGT-j3-bo7" customClass="ZATermsAndConditionsViewController" customModule="Zagil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P02-LG-8F7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGY-eJ-v1K">
+                                <rect key="frame" x="0.0" y="88" width="414" height="646"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yi4-er-iPP" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="692.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXC-8U-kho">
+                                                <rect key="frame" x="30" y="20" width="354" height="672.5"/>
+                                                <string key="text">By accessing this web site, you are agreeing to be bound by these web site Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this web site are protected by applicable copyright and trade mark law. Permission is granted to temporarily download one copy of the materials (information or software) on Zagil web site for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not modify or copy the materials use the materials for any commercial purpose, or for any public display (commercial or non-commercial) attempt to decompile or reverse engineer any software contained on Zagil web site remove any copyright or other proprietary notations from the materials or transfer the materials to another person or mirror the materials on any other server.This license shall automatically terminate if you violate any of these restrictions and may be terminated by Zagil at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</string>
+                                                <fontDescription key="fontDescription" name="ooredoo-Regular" family="ooredoo" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="LXC-8U-kho" secondAttribute="bottom" id="3sT-w4-mMY"/>
+                                            <constraint firstAttribute="trailing" secondItem="LXC-8U-kho" secondAttribute="trailing" constant="30" id="HXR-v5-Rcc"/>
+                                            <constraint firstItem="LXC-8U-kho" firstAttribute="leading" secondItem="Yi4-er-iPP" secondAttribute="leading" constant="30" id="P7G-7v-rqg"/>
+                                            <constraint firstItem="LXC-8U-kho" firstAttribute="top" secondItem="Yi4-er-iPP" secondAttribute="top" constant="20" symbolic="YES" id="p7y-YB-mwi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Yi4-er-iPP" secondAttribute="bottom" id="1bW-I7-CSA"/>
+                                    <constraint firstItem="Yi4-er-iPP" firstAttribute="width" secondItem="NGY-eJ-v1K" secondAttribute="width" id="Rux-4T-uUr"/>
+                                    <constraint firstItem="Yi4-er-iPP" firstAttribute="height" secondItem="NGY-eJ-v1K" secondAttribute="height" priority="249" id="V5o-pD-56c"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yi4-er-iPP" secondAttribute="trailing" id="b5q-aH-qJa"/>
+                                    <constraint firstItem="Yi4-er-iPP" firstAttribute="leading" secondItem="NGY-eJ-v1K" secondAttribute="leading" id="jph-3Y-Zkg"/>
+                                    <constraint firstItem="Yi4-er-iPP" firstAttribute="top" secondItem="NGY-eJ-v1K" secondAttribute="top" id="uqJ-IM-ooF"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="BjR-Fc-tVt"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="l39-X3-VIj"/>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cw4-yl-AYh">
+                                <rect key="frame" x="41.5" y="758" width="331" height="104"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whS-Mg-aoO" customClass="ZAButton" customModule="Zagil" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="999" constant="48" id="R6k-JI-Hnw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ooredoo-Bold" family="ooredoo" pointSize="17"/>
+                                        <state key="normal" title="Agree">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="agreeButtonTapped:" destination="zGT-j3-bo7" eventType="touchUpInside" id="EjR-VS-3Ae"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ab-lg-0Bo" customClass="ZAButton" customModule="Zagil" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="56" width="331" height="48"/>
+                                        <fontDescription key="fontDescription" name="ooredoo-Bold" family="ooredoo" pointSize="17"/>
+                                        <state key="normal" title="Decline">
+                                            <color key="titleColor" name="lightGrey"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="declineButtonTapped:" destination="zGT-j3-bo7" eventType="touchUpInside" id="U62-Zv-9fa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NGY-eJ-v1K" firstAttribute="leading" secondItem="P02-LG-8F7" secondAttribute="leading" id="AXV-GR-4O1"/>
+                            <constraint firstItem="a9D-Bn-iAw" firstAttribute="bottom" secondItem="cw4-yl-AYh" secondAttribute="bottom" id="DV5-iX-4Fh"/>
+                            <constraint firstItem="cw4-yl-AYh" firstAttribute="top" secondItem="NGY-eJ-v1K" secondAttribute="bottom" constant="24" id="HXs-Kj-1QH"/>
+                            <constraint firstItem="cw4-yl-AYh" firstAttribute="width" secondItem="P02-LG-8F7" secondAttribute="width" multiplier="0.8" id="ivS-yS-8gm"/>
+                            <constraint firstItem="cw4-yl-AYh" firstAttribute="centerX" secondItem="P02-LG-8F7" secondAttribute="centerX" id="jGG-Ch-ZIe"/>
+                            <constraint firstItem="NGY-eJ-v1K" firstAttribute="top" secondItem="a9D-Bn-iAw" secondAttribute="top" id="q6W-XM-iZj"/>
+                            <constraint firstAttribute="trailing" secondItem="NGY-eJ-v1K" secondAttribute="trailing" id="woV-TE-efY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a9D-Bn-iAw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zul-zM-WYC"/>
+                    <connections>
+                        <outlet property="agreeButton" destination="whS-Mg-aoO" id="Mei-VZ-8GD"/>
+                        <outlet property="declineButton" destination="4ab-lg-0Bo" id="2km-zx-oNF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biK-QT-l1w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="121"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PeK-qe-pqk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yal-am-UPa" customClass="ZANavigationController" customModule="Zagil" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GMf-DN-psn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zGT-j3-bo7" kind="relationship" relationship="rootViewController" id="Tqg-lv-uvt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZC-jh-GP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192.75362318840581" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="lightGrey">
+            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

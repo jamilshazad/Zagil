@@ -1,0 +1,25 @@
+platform :ios, '12.0'
+
+target 'Zagil' do
+
+  use_frameworks!
+  
+  pod 'R.swift'
+  pod 'CocoaLumberjack/Swift'
+  pod 'Moya'
+  pod 'PromiseKit'
+  pod 'ReachabilitySwift'
+  pod 'LBTATools'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'GoogleSignIn'
+  pod 'MBProgressHUD'
+  pod 'NextGrowingTextView'
+  pod 'DateScrollPicker'
+  pod 'PlacesPicker'
+  pod 'MASegmentedControl'
+  pod 'DropDown'
+  pod 'UITextView+Placeholder'
+
+
+end

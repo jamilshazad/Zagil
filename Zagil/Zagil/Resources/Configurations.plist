@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BASE_URL</key>
+	<dict>
+		<key>Live</key>
+		<string>http://ec2-18-219-185-175.us-east-2.compute.amazonaws.com:3000/api/v1/</string>
+	</dict>
+	<key>GOOGLE_CLIENT_ID</key>
+	<dict>
+		<key>Live</key>
+		<string>409652644944-5i998qs1q91dfps27v0rd4kq60rlmcpp.apps.googleusercontent.com</string>
+	</dict>
+	<key>GOOGLE_API_KEY</key>
+	<dict>
+		<key>Live</key>
+		<string>AIzaSyBYSPgak2GXFeFS7RRSqAnC-TJkXoiG46Y</string>
+	</dict>
+</dict>
+</plist>
