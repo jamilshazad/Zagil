@@ -19,7 +19,9 @@ enum UserService: ServiceType {
     case updateFacebook(iD: String, email: String)
     case updateGoogle(iD: String, email: String)
     case loginWithSocial(iD: String, name: String, email: String, provider: String)
-    
+    case getIDByFacebookID(id: String)
+    case getIDByGoogleID(id: String)
+
     
     // MARK: - Configuration
     
@@ -31,12 +33,15 @@ enum UserService: ServiceType {
         case .updateFacebook: return "user/updateIDFacebook"
         case .updateGoogle: return "user/updateIDGoogle"
         case .loginWithSocial: return "user/loginWithGoogle"
+        case .getIDByFacebookID: return "user/facebook/getID"
+        case .getIDByGoogleID: return "user/google/getID"
+
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .login, .verifyEmail: return .get
+        case .login, .verifyEmail, .getIDByFacebookID, .getIDByGoogleID: return .get
         case .signup, .updateFacebook, .updateGoogle, .loginWithSocial: return .post
         }
     }
@@ -71,6 +76,14 @@ enum UserService: ServiceType {
                           "name" : name,
                           "email" : email,
                           "requestFrom" : provider]
+            return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
+            
+        case .getIDByFacebookID(let facebookId):
+            let params = ["f_id" : facebookId]
+            return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
+            
+        case .getIDByGoogleID(let googleId):
+            let params = ["g_id" : googleId]
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
         }
     }

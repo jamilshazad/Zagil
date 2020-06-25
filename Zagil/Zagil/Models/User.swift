@@ -12,7 +12,7 @@ struct User: Codable {
     
     var iD: Int = 0
     var email: String? = nil
-    var password: String = ""
+    var password: String? = nil
     var UID: Int = 0
     var name: String = ""
     var phone: String? = nil
@@ -23,7 +23,8 @@ struct User: Codable {
     var facebookID: String? = nil
     var googleID: String? = nil
     var feedback: String? = nil
-    
+    var fcmToken: String? = nil
+
     enum CodingKeys: String, CodingKey {
         case iD = "id"
         case email
@@ -38,6 +39,8 @@ struct User: Codable {
         case facebookID = "f_id"
         case googleID = "g_id"
         case feedback
+        case fcmToken = "fcm_token"
+
     }
 }
 

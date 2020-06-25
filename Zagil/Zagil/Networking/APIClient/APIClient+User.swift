@@ -78,29 +78,29 @@ extension APIClient {
                 guard let result = array.first as? [String : JSON] else { throw ServiceError.badResponse }
                 return try decode(response: result)
            
-            }.done { model in
-            var user = User()
-            //user.iD =
-            user.name = name
-            user.email = email
-            if provider == .facebook {
-                user.facebookID = iD
-            } else {
-                user.googleID = iD
-            }
-                seal.fulfill(user)
-                
-            }
-//            .then { response -> Promise<User> in
-//                if response.isUpdated {
-//                    return socialLogin(iD: iD, name: name, email: email, provider: provider)
-//                } else {
-//                    throw ServiceError.badResponse
-//                }
+//            }.done { model in
+//            var user = User()
+//            //user.iD =
+//            user.name = name
+//            user.email = email
+//            if provider == .facebook {
+//                user.facebookID = iD
+//            } else {
+//                user.googleID = iD
 //            }
-//             .done { model in
-//               seal.fulfill(model)
+//                seal.fulfill(user)
+//
 //            }
+            }.then { response -> Promise<User> in
+                if response.isUpdated {
+                    return provider == .facebook ? getUserDataOnFacebookLogin(socialID: iD): getUserDataOnGoogleLogin(socialID: iD)
+                } else {
+                    throw ServiceError.badResponse
+                }
+            }
+             .done { model in
+               seal.fulfill(model)
+            }
             .catch { error in
                 seal.reject(error)
             }
@@ -128,6 +128,40 @@ extension APIClient {
                     user.googleID = iD
                 }
                 seal.fulfill(user)
+            }.catch { error in
+                seal.reject(error)
+            }
+        }
+    }
+    
+    class func getUserDataOnFacebookLogin( socialID: String) -> Promise<User> {
+           let login = UserService.getIDByFacebookID(id: socialID)
+           return Promise<User> { seal in
+               firstly {
+                   NetworkManager.manager.request(login)
+               }.then { json -> Promise<User> in
+                   guard let array = json as? [JSON], !array.isEmpty else { throw ServiceError.userNotExists }
+                   guard let result = array.first as? [String : JSON] else { throw ServiceError.badResponse }
+                   return try decode(response: result)
+               }.done { model in
+                   seal.fulfill(model)
+               }.catch { error in
+                   seal.reject(error)
+               }
+           }
+       }
+    
+    class func getUserDataOnGoogleLogin( socialID: String) -> Promise<User> {
+        let login = UserService.getIDByGoogleID(id: socialID)
+        return Promise<User> { seal in
+            firstly {
+                NetworkManager.manager.request(login)
+            }.then { json -> Promise<User> in
+                guard let array = json as? [JSON], !array.isEmpty else { throw ServiceError.userNotExists }
+                guard let result = array.first as? [String : JSON] else { throw ServiceError.badResponse }
+                return try decode(response: result)
+            }.done { model in
+                seal.fulfill(model)
             }.catch { error in
                 seal.reject(error)
             }

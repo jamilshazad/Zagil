@@ -116,6 +116,8 @@
 		CFD80966244C3D98009D7750 /* SFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD80965244C3D98009D7750 /* SFSafariViewController.swift */; };
 		CFD80968244C65C4009D7750 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD80967244C65C4009D7750 /* User.swift */; };
 		CFE2C801244982E200211DD2 /* ZAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2C800244982E200211DD2 /* ZAViewController.swift */; };
+		FA8C622724A31701001DA666 /* ZAUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C622524A31700001DA666 /* ZAUserTableViewCell.swift */; };
+		FA8C622824A31701001DA666 /* ZAUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8C622624A31700001DA666 /* ZAUserTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -242,6 +244,8 @@
 		CFD80967244C65C4009D7750 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CFE2C800244982E200211DD2 /* ZAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAViewController.swift; sourceTree = "<group>"; };
 		DA78659FEC02A6B84C5C874F /* Pods-Zagil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zagil.debug.xcconfig"; path = "Target Support Files/Pods-Zagil/Pods-Zagil.debug.xcconfig"; sourceTree = "<group>"; };
+		FA8C622524A31700001DA666 /* ZAUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZAUserTableViewCell.swift; sourceTree = "<group>"; };
+		FA8C622624A31700001DA666 /* ZAUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZAUserTableViewCell.xib; sourceTree = "<group>"; };
 		FEEB02B618BC2F40F87930A2 /* Pods_Zagil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zagil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -486,6 +490,7 @@
 		CF539F84244CDBB700CE612E /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				FA0FF8C824A310C300BC25E1 /* Cells */,
 				CFBF5173244DC31E00345524 /* ZAInboxViewController.swift */,
 			);
 			path = Messages;
@@ -763,6 +768,15 @@
 			path = "Base View Controllers";
 			sourceTree = "<group>";
 		};
+		FA0FF8C824A310C300BC25E1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA8C622524A31700001DA666 /* ZAUserTableViewCell.swift */,
+				FA8C622624A31700001DA666 /* ZAUserTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -841,6 +855,7 @@
 				CFD80964244B4D96009D7750 /* Configurations.plist in Resources */,
 				CF4CC548244F09AD003F6B35 /* ZADashboardTableViewCell.xib in Resources */,
 				CF8394B924497F3B006A7674 /* ooredoo-Regular_gdi.ttf in Resources */,
+				FA8C622824A31701001DA666 /* ZAUserTableViewCell.xib in Resources */,
 				CF539F88244D765300CE612E /* Shipments.storyboard in Resources */,
 				CF539F7D244C9A2700CE612E /* Privacy.storyboard in Resources */,
 			);
@@ -972,6 +987,7 @@
 				CF6C21C52410FA440055C82E /* SocialSession.swift in Sources */,
 				CFD80968244C65C4009D7750 /* User.swift in Sources */,
 				CF6C21A52410FA440055C82E /* Provider.swift in Sources */,
+				FA8C622724A31701001DA666 /* ZAUserTableViewCell.swift in Sources */,
 				CF4CC554244F533B003F6B35 /* ShipmentService.swift in Sources */,
 				CF4CC53D244EE787003F6B35 /* ZASenderFeedsViewController.swift in Sources */,
 				CF6C21A92410FA440055C82E /* Authorize.swift in Sources */,
