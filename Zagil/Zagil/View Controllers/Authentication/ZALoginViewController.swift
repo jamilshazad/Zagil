@@ -79,6 +79,7 @@ class ZALoginViewController: ZAViewController {
         }.done { [weak self] user in
             guard let self = self else { return }
             self.hideHud()
+            ZARealTimeDatabaseManager.shared.addUser(userInfo: user)
             ZAUserDefaults.user.set(value: user)
             self.view.window?.swapRoot(viewController: R.storyboard.privacy.instantiateInitialViewController()!, animation: .present)
         }.catch { [weak self] error in

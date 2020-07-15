@@ -20,6 +20,9 @@ target 'Zagil' do
   pod 'MASegmentedControl'
   pod 'DropDown'
   pod 'UITextView+Placeholder'
-
-
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/RemoteConfig'
+  pod 'Firebase/Storage'
 end

@@ -168,6 +168,13 @@ extension ZATravelerFeedViewController: UITableViewDataSource, UITableViewDelega
         cell.configure(traveler: feed) { [weak self] in
             guard let _ = self else { return }
             // Contact Button Action
+           
+           
+            self?.push(viewController: ZAConverstationViewController.self, storyboard: R.storyboard.messages(), configure: { (vC) in
+                vC.senderData = feed
+            })
+            
+
         }
         
         return cell

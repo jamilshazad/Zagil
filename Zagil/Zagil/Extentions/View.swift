@@ -114,4 +114,10 @@ extension UIView {
         layer.sublayers?.removeAll { $0.name == "Gradient" }
     }
     
+        func rounded(radius: CGFloat) {
+            self.layer.cornerRadius = radius
+            self.clipsToBounds = true
+        }
+   
+    
 }

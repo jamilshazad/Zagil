@@ -116,8 +116,21 @@
 		CFD80966244C3D98009D7750 /* SFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD80965244C3D98009D7750 /* SFSafariViewController.swift */; };
 		CFD80968244C65C4009D7750 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD80967244C65C4009D7750 /* User.swift */; };
 		CFE2C801244982E200211DD2 /* ZAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2C800244982E200211DD2 /* ZAViewController.swift */; };
+		FA35860C24AC72E700CFD397 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35860B24AC72E700CFD397 /* Chat.swift */; };
+		FA35860E24AC745A00CFD397 /* MessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35860D24AC745A00CFD397 /* MessageStore.swift */; };
+		FA61DE3B24A7A61C0050860F /* ZARealTimeDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61DE3A24A7A61C0050860F /* ZARealTimeDatabaseManager.swift */; };
+		FA61DE3D24A9A6E40050860F /* ZAConverstationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61DE3C24A9A6E40050860F /* ZAConverstationViewController.swift */; };
+		FA61DE3F24A9AEDB0050860F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61DE3E24A9AEDB0050860F /* Message.swift */; };
+		FA61DE4424A9AF3A0050860F /* LeftViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA61DE4024A9AF3A0050860F /* LeftViewCell.xib */; };
+		FA61DE4524A9AF3A0050860F /* RightViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61DE4124A9AF3A0050860F /* RightViewCell.swift */; };
+		FA61DE4624A9AF3A0050860F /* LeftViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61DE4224A9AF3A0050860F /* LeftViewCell.swift */; };
+		FA61DE4724A9AF3A0050860F /* RightViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA61DE4324A9AF3A0050860F /* RightViewCell.xib */; };
 		FA8C622724A31701001DA666 /* ZAUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C622524A31700001DA666 /* ZAUserTableViewCell.swift */; };
 		FA8C622824A31701001DA666 /* ZAUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8C622624A31700001DA666 /* ZAUserTableViewCell.xib */; };
+		FAD38E9724B8E8E6006EBE16 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD38E9624B8E8E6006EBE16 /* KeyboardLayoutConstraint.swift */; };
+		FAD38E9924BB2BF4006EBE16 /* ZACreateCustomOfferPopuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD38E9824BB2BF4006EBE16 /* ZACreateCustomOfferPopuViewController.swift */; };
+		FAD38E9B24BB7E5B006EBE16 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD38E9A24BB7E5B006EBE16 /* ChatService.swift */; };
+		FAFCA2C324A5B3B800D72B46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAFCA2C224A5B3B700D72B46 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -244,8 +257,21 @@
 		CFD80967244C65C4009D7750 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CFE2C800244982E200211DD2 /* ZAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAViewController.swift; sourceTree = "<group>"; };
 		DA78659FEC02A6B84C5C874F /* Pods-Zagil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zagil.debug.xcconfig"; path = "Target Support Files/Pods-Zagil/Pods-Zagil.debug.xcconfig"; sourceTree = "<group>"; };
+		FA35860B24AC72E700CFD397 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		FA35860D24AC745A00CFD397 /* MessageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageStore.swift; sourceTree = "<group>"; };
+		FA61DE3A24A7A61C0050860F /* ZARealTimeDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZARealTimeDatabaseManager.swift; sourceTree = "<group>"; };
+		FA61DE3C24A9A6E40050860F /* ZAConverstationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAConverstationViewController.swift; sourceTree = "<group>"; };
+		FA61DE3E24A9AEDB0050860F /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		FA61DE4024A9AF3A0050860F /* LeftViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewCell.xib; sourceTree = "<group>"; };
+		FA61DE4124A9AF3A0050860F /* RightViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewCell.swift; sourceTree = "<group>"; };
+		FA61DE4224A9AF3A0050860F /* LeftViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewCell.swift; sourceTree = "<group>"; };
+		FA61DE4324A9AF3A0050860F /* RightViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightViewCell.xib; sourceTree = "<group>"; };
 		FA8C622524A31700001DA666 /* ZAUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZAUserTableViewCell.swift; sourceTree = "<group>"; };
 		FA8C622624A31700001DA666 /* ZAUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZAUserTableViewCell.xib; sourceTree = "<group>"; };
+		FAD38E9624B8E8E6006EBE16 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		FAD38E9824BB2BF4006EBE16 /* ZACreateCustomOfferPopuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZACreateCustomOfferPopuViewController.swift; sourceTree = "<group>"; };
+		FAD38E9A24BB7E5B006EBE16 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		FAFCA2C224A5B3B700D72B46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FEEB02B618BC2F40F87930A2 /* Pods_Zagil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zagil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -355,6 +381,7 @@
 		CF27120C23D6D42700C284A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FAFCA2C224A5B3B700D72B46 /* GoogleService-Info.plist */,
 				CF8394B624497EFB006A7674 /* Fonts */,
 				CF1F25DE2448E66C009C75C6 /* R.generated.swift */,
 				CF8394BB24497FA9006A7674 /* Images */,
@@ -394,6 +421,7 @@
 				CF2DCC9923D97F910067EC7D /* FormValidator */,
 				CF2DCC7823D95A190067EC7D /* Target.swift */,
 				CF512A0124499F1300869F59 /* Types.swift */,
+				FAD38E9624B8E8E6006EBE16 /* KeyboardLayoutConstraint.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -492,6 +520,8 @@
 			children = (
 				FA0FF8C824A310C300BC25E1 /* Cells */,
 				CFBF5173244DC31E00345524 /* ZAInboxViewController.swift */,
+				FA61DE3C24A9A6E40050860F /* ZAConverstationViewController.swift */,
+				FAD38E9824BB2BF4006EBE16 /* ZACreateCustomOfferPopuViewController.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -659,6 +689,7 @@
 				CFA989A523D868FD005E76E8 /* UserService.swift */,
 				CF4CC54F244F44B6003F6B35 /* TripService.swift */,
 				CF4CC553244F533B003F6B35 /* ShipmentService.swift */,
+				FAD38E9A24BB7E5B006EBE16 /* ChatService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -666,6 +697,8 @@
 		CFA989AA23D869D5005E76E8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA61DE3E24A9AEDB0050860F /* Message.swift */,
+				FA35860B24AC72E700CFD397 /* Chat.swift */,
 				CFA989AF23D86A47005E76E8 /* Empty.swift */,
 				CFD80967244C65C4009D7750 /* User.swift */,
 				CF4CC549244F295D003F6B35 /* SenderFeed.swift */,
@@ -701,6 +734,8 @@
 			isa = PBXGroup;
 			children = (
 				CFB91C1B23D6FE1D008FDD79 /* ConfigurationManager.swift */,
+				FA61DE3A24A7A61C0050860F /* ZARealTimeDatabaseManager.swift */,
+				FA35860D24AC745A00CFD397 /* MessageStore.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -771,6 +806,10 @@
 		FA0FF8C824A310C300BC25E1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				FA61DE4224A9AF3A0050860F /* LeftViewCell.swift */,
+				FA61DE4024A9AF3A0050860F /* LeftViewCell.xib */,
+				FA61DE4124A9AF3A0050860F /* RightViewCell.swift */,
+				FA61DE4324A9AF3A0050860F /* RightViewCell.xib */,
 				FA8C622524A31700001DA666 /* ZAUserTableViewCell.swift */,
 				FA8C622624A31700001DA666 /* ZAUserTableViewCell.xib */,
 			);
@@ -843,6 +882,7 @@
 				CF27123423D6D8A700C284A0 /* LaunchScreen.storyboard in Resources */,
 				CFB07A3D2449B35B0028412D /* Authentication.storyboard in Resources */,
 				CFB91C2C23D7097B008FDD79 /* Localizable.strings in Resources */,
+				FA61DE4424A9AF3A0050860F /* LeftViewCell.xib in Resources */,
 				CF539F8A244D765D00CE612E /* Dashboard.storyboard in Resources */,
 				CF54C434245C29E100A00D70 /* ZATitleView.xib in Resources */,
 				CF539F86244D762400CE612E /* Messages.storyboard in Resources */,
@@ -855,8 +895,10 @@
 				CFD80964244B4D96009D7750 /* Configurations.plist in Resources */,
 				CF4CC548244F09AD003F6B35 /* ZADashboardTableViewCell.xib in Resources */,
 				CF8394B924497F3B006A7674 /* ooredoo-Regular_gdi.ttf in Resources */,
+				FAFCA2C324A5B3B800D72B46 /* GoogleService-Info.plist in Resources */,
 				FA8C622824A31701001DA666 /* ZAUserTableViewCell.xib in Resources */,
 				CF539F88244D765300CE612E /* Shipments.storyboard in Resources */,
+				FA61DE4724A9AF3A0050860F /* RightViewCell.xib in Resources */,
 				CF539F7D244C9A2700CE612E /* Privacy.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -949,12 +991,14 @@
 				CF4956602461B98800DE6CA2 /* ZAPostedTripDetailViewController.swift in Sources */,
 				CF6C21B92410FA440055C82E /* FacebookPermissions.swift in Sources */,
 				CF4CC547244F09AD003F6B35 /* ZADashboardTableViewCell.swift in Sources */,
+				FA61DE4524A9AF3A0050860F /* RightViewCell.swift in Sources */,
 				CF4CC558244F5A63003F6B35 /* ZAAddShipmentViewController.swift in Sources */,
 				CFD8095E2449D6EE009D7750 /* ZALoginViewController.swift in Sources */,
 				CFA9899823D84DAD005E76E8 /* ServiceError.swift in Sources */,
 				CF6C21A12410FA440055C82E /* Logout.swift in Sources */,
 				CF512A0224499F1300869F59 /* Types.swift in Sources */,
 				CFB91C1F23D6FE1D008FDD79 /* ConfigurationManager.swift in Sources */,
+				FA61DE3D24A9A6E40050860F /* ZAConverstationViewController.swift in Sources */,
 				CF2DCCC223D9C9A30067EC7D /* ScrollViewExtention.swift in Sources */,
 				CF4CC54E244F2AB0003F6B35 /* APIClient+Trip.swift in Sources */,
 				CF2DCCA823D9815C0067EC7D /* ValidationObject.swift in Sources */,
@@ -964,6 +1008,7 @@
 				CFBF517C244DC43900345524 /* ZAShipmentsViewController.swift in Sources */,
 				CF2DCC7C23D95A190067EC7D /* Target.swift in Sources */,
 				CF8D518724632D3A004CC9A3 /* ZAPostedShipmentDetailViewController.swift in Sources */,
+				FAD38E9924BB2BF4006EBE16 /* ZACreateCustomOfferPopuViewController.swift in Sources */,
 				CFB07A3F2449B42D0028412D /* ZAAuthenticationViewController.swift in Sources */,
 				CF1290FC245C76C700723AA2 /* DropDownView.swift in Sources */,
 				CF5129F62449877F00869F59 /* ZANavigationController.swift in Sources */,
@@ -974,12 +1019,15 @@
 				CF4CC552244F52F8003F6B35 /* APIClient+Shipment.swift in Sources */,
 				CF1290FE245D7F5200723AA2 /* PostedTrip.swift in Sources */,
 				CF6C21AD2410FA440055C82E /* AppleProvider.swift in Sources */,
+				FAD38E9724B8E8E6006EBE16 /* KeyboardLayoutConstraint.swift in Sources */,
 				CF539F7B244C9A1200CE612E /* ZATermsAndConditionsViewController.swift in Sources */,
+				FA35860E24AC745A00CFD397 /* MessageStore.swift in Sources */,
 				CF512A0424499F8500869F59 /* View.swift in Sources */,
 				CF54C42F245C27A600A00D70 /* ZAMyTripsViewController.swift in Sources */,
 				CF5129FB24499C3D00869F59 /* CollectionView.swift in Sources */,
 				CFBF5174244DC31E00345524 /* ZAInboxViewController.swift in Sources */,
 				CF54C432245C29D000A00D70 /* ZATitleView.swift in Sources */,
+				FA61DE3B24A7A61C0050860F /* ZARealTimeDatabaseManager.swift in Sources */,
 				CF4CC541244F0341003F6B35 /* Date.swift in Sources */,
 				CF6C21B52410FA440055C82E /* FacebookProvider.swift in Sources */,
 				CF3AE24F24519EC700DDA1EE /* ZATableViewController.swift in Sources */,
@@ -992,6 +1040,7 @@
 				CF4CC53D244EE787003F6B35 /* ZASenderFeedsViewController.swift in Sources */,
 				CF6C21A92410FA440055C82E /* Authorize.swift in Sources */,
 				CF6C21CD2410FA440055C82E /* Providing.swift in Sources */,
+				FA61DE3F24A9AEDB0050860F /* Message.swift in Sources */,
 				CF4CC53F244EE79F003F6B35 /* ZATravelerFeedViewController.swift in Sources */,
 				CFB91C9423D71505008FDD79 /* Logger.swift in Sources */,
 				CF6C21BD2410FA440055C82E /* ProviderType.swift in Sources */,
@@ -1015,9 +1064,11 @@
 				CF539F83244CDB1C00CE612E /* ZATabBarViewController.swift in Sources */,
 				CFD80962244A1EE6009D7750 /* ZATextField.swift in Sources */,
 				CF5129FE24499CB100869F59 /* Registerable.swift in Sources */,
+				FA61DE4624A9AF3A0050860F /* LeftViewCell.swift in Sources */,
 				CFD80966244C3D98009D7750 /* SFSafariViewController.swift in Sources */,
 				CFB07A3B2449B0CA0028412D /* ZAButton.swift in Sources */,
 				CF27123023D6D8A700C284A0 /* AppDelegate.swift in Sources */,
+				FA35860C24AC72E700CFD397 /* Chat.swift in Sources */,
 				CF512A0024499EAF00869F59 /* Window.swift in Sources */,
 				CF512A082449A2E300869F59 /* Collection.swift in Sources */,
 				CF2DCCB723D9B62E0067EC7D /* ValidatorTextField.swift in Sources */,
@@ -1030,6 +1081,7 @@
 				CF10C7B323D72CA20082602A /* ServiceType.swift in Sources */,
 				CF54C436245C340B00A00D70 /* ZAMyShipmentsViewController.swift in Sources */,
 				CF2DCCB223D9AAE60067EC7D /* ValidationRegex.swift in Sources */,
+				FAD38E9B24BB7E5B006EBE16 /* ChatService.swift in Sources */,
 				CF81F32A2449C37B004E3AEB /* String.swift in Sources */,
 				CF6C21B12410FA440055C82E /* GoogleProvider.swift in Sources */,
 				CF129100245D7F5E00723AA2 /* PostedShipment.swift in Sources */,
@@ -1190,7 +1242,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 52SF36TK5H;
 				INFOPLIST_FILE = "Zagil/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1213,7 +1265,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 52SF36TK5H;
 				INFOPLIST_FILE = "Zagil/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

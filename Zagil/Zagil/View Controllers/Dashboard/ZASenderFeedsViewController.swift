@@ -167,6 +167,8 @@ extension ZASenderFeedsViewController: UITableViewDataSource, UITableViewDelegat
         cell.configure(sender: feed) { [weak self] in
             guard let _ = self else { return }
             // Contact Button Action
+            self?.push(viewController: ZAConverstationViewController.self, storyboard: R.storyboard.messages())
+
         }
         
         return cell

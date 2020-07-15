@@ -12,4 +12,6 @@ struct ZAUserDefaults {
     static var email = UserDefaultObject<String>(key: "Email")
     static var password = UserDefaultObject<String>(key: "Password")
     static var user = UserDefaultObject<User>(key: "User")
+    static var token = UserDefaultObject<String>(key: "token")
+
 }

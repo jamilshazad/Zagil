@@ -11,9 +11,11 @@ import GoogleSignIn
 import FBSDKCoreKit
 import GooglePlaces
 import DropDown
+import Firebase
+import FirebaseMessaging
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
     
     var window: UIWindow?
 
@@ -30,6 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Setup DropDown
         DropDown.startListeningToKeyboard()
         
+        //configuring firebase
+        FirebaseApp.configure()
+        Messaging.messaging().delegate = self
+
         return true
     }
 
@@ -39,6 +45,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                                      annotation: options[.annotation])
         let google = GIDSignIn.sharedInstance().handle(url)
         return facebook || google
+    }
+    
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+      print("Firebase registration token: \(fcmToken)")
+
+      let dataDict:[String: String] = ["token": fcmToken]
+        ZAUserDefaults.token.set(value: fcmToken)
+      NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+      // TODO: If necessary send token to application server.
+      // Note: This callback is fired at each app startup and whenever a new token is generated.
     }
     
 }

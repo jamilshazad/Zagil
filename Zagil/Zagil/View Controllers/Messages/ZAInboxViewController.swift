@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ZAInboxViewController: ZAViewController {
 
@@ -14,6 +15,8 @@ class ZAInboxViewController: ZAViewController {
     // MARK: - Class Properties
     @IBOutlet private weak var tableView: UITableView!
     private var users: [User] = []
+    
+    private var chats: [Chat] = []
 
     
     
@@ -23,12 +26,88 @@ class ZAInboxViewController: ZAViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         setupNavigationBar()
         setupViewController()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        loadInboxMessage()
+    }
+    
 
+    private func getAppUsers() {
+        ZARealTimeDatabaseManager.shared.getAppUsers()
+            { (snapshot) in
+                //if the reference have some values
+                if snapshot.childrenCount > 0 {
+                    
+                    //clearing the list
+                    self.users.removeAll()
+                    
+                    for users in snapshot.children.allObjects as! [DataSnapshot] {
+                        //getting values
+                        let userObject = users.value as? [String: AnyObject]
+                        let userId = userObject?["id"]
+                        let userName  = userObject?["name"]
+                        let userImage = userObject?["image"]
+                        let token = userObject?["token"]
+
+                        let user = User(iD: userId as! Int,  name: userName as! String,  image: userImage as? String, fcmToken: token as? String)
+                        self.users.append(user)
+                    }
+                  
+                }
+                else {
+                    self.users.removeAll()
+                }
+                self.tableView.reloadData()
+            }
+        }
+   
+    
+    func loadInboxMessage() {
+          
+        chats.removeAll()
+        ZARealTimeDatabaseManager.shared.getInboxMessages(completionHandler: { (snapshot) in
+            if snapshot.childrenCount > 0 {
+               
+                
+                for messages in snapshot.children.allObjects as! [DataSnapshot] {
+                    let userSnap = messages
+                    let list_user_id = userSnap.key
+                    
+                    var lastMessage: String?
+                    ZARealTimeDatabaseManager.shared.loadLastLineInboxMessages(chatUserID: list_user_id) { (snapshot) in
+                        
+                        for messages in snapshot.children.allObjects as! [DataSnapshot] {
+                            let message = messages.value as? [String: AnyObject]
+                            lastMessage = message?["message"] as! String
+                        }
+                    }
+                    
+                    var userName: String?
+                    var userImage: String?
+                    ZARealTimeDatabaseManager.shared.loadUsersInfo(chatUserID: list_user_id) { (snapshot) in
+                        
+                        //for messages in snapshot.children.allObjects as! [DataSnapshot] {
+                       let userInfo = snapshot.value as? [String: AnyObject]
+                        userName = userInfo?["name"] as! String
+                        userImage = userInfo?["image"] as! String
+                        if let name = userName, let image = userImage, let lastUserMessage = lastMessage  {
+                             let chatObject = Chat(title: name, imageName: image, latestMessage: lastUserMessage, sender: "")
+                             self.chats.append(chatObject)
+                        }
+                      self.tableView.reloadData()
+
+                    }
+                
+                }
+                   
+               }
+           })
+       }
+    
     // MARK: - Private Methods
     
     private func setupNavigationBar() {
@@ -56,15 +135,15 @@ extension ZAInboxViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return chats.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.getCell(type: ZAUserTableViewCell.self) else { return UITableViewCell() }
         
-       // guard let user = users[safe: indexPath.row] else { return UITableViewCell() }
+        guard let chat = chats[safe: indexPath.row] else { return UITableViewCell() }
         
-       // cell.configure(user: user)
+         cell.confiureCellWithData(userChat: chat)
         
         return cell
     }
