@@ -116,8 +116,12 @@
 		CFD80966244C3D98009D7750 /* SFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD80965244C3D98009D7750 /* SFSafariViewController.swift */; };
 		CFD80968244C65C4009D7750 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD80967244C65C4009D7750 /* User.swift */; };
 		CFE2C801244982E200211DD2 /* ZAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE2C800244982E200211DD2 /* ZAViewController.swift */; };
+		FA309BE524C8B9FB005BBF16 /* ZAOfferListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA309BE424C8B9FA005BBF16 /* ZAOfferListViewController.swift */; };
+		FA309BE824C8BD69005BBF16 /* ZAOfferListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA309BE624C8BD69005BBF16 /* ZAOfferListTableViewCell.swift */; };
+		FA309BE924C8BD69005BBF16 /* ZAOfferListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA309BE724C8BD69005BBF16 /* ZAOfferListTableViewCell.xib */; };
 		FA35860C24AC72E700CFD397 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35860B24AC72E700CFD397 /* Chat.swift */; };
 		FA35860E24AC745A00CFD397 /* MessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA35860D24AC745A00CFD397 /* MessageStore.swift */; };
+		FA602FB024C42124001B06F6 /* APIClient+Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA602FAF24C42123001B06F6 /* APIClient+Chat.swift */; };
 		FA61DE3B24A7A61C0050860F /* ZARealTimeDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61DE3A24A7A61C0050860F /* ZARealTimeDatabaseManager.swift */; };
 		FA61DE3D24A9A6E40050860F /* ZAConverstationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61DE3C24A9A6E40050860F /* ZAConverstationViewController.swift */; };
 		FA61DE3F24A9AEDB0050860F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61DE3E24A9AEDB0050860F /* Message.swift */; };
@@ -257,8 +261,12 @@
 		CFD80967244C65C4009D7750 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CFE2C800244982E200211DD2 /* ZAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAViewController.swift; sourceTree = "<group>"; };
 		DA78659FEC02A6B84C5C874F /* Pods-Zagil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zagil.debug.xcconfig"; path = "Target Support Files/Pods-Zagil/Pods-Zagil.debug.xcconfig"; sourceTree = "<group>"; };
+		FA309BE424C8B9FA005BBF16 /* ZAOfferListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAOfferListViewController.swift; sourceTree = "<group>"; };
+		FA309BE624C8BD69005BBF16 /* ZAOfferListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAOfferListTableViewCell.swift; sourceTree = "<group>"; };
+		FA309BE724C8BD69005BBF16 /* ZAOfferListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZAOfferListTableViewCell.xib; sourceTree = "<group>"; };
 		FA35860B24AC72E700CFD397 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		FA35860D24AC745A00CFD397 /* MessageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageStore.swift; sourceTree = "<group>"; };
+		FA602FAF24C42123001B06F6 /* APIClient+Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIClient+Chat.swift"; sourceTree = "<group>"; };
 		FA61DE3A24A7A61C0050860F /* ZARealTimeDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZARealTimeDatabaseManager.swift; sourceTree = "<group>"; };
 		FA61DE3C24A9A6E40050860F /* ZAConverstationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAConverstationViewController.swift; sourceTree = "<group>"; };
 		FA61DE3E24A9AEDB0050860F /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -522,6 +530,7 @@
 				CFBF5173244DC31E00345524 /* ZAInboxViewController.swift */,
 				FA61DE3C24A9A6E40050860F /* ZAConverstationViewController.swift */,
 				FAD38E9824BB2BF4006EBE16 /* ZACreateCustomOfferPopuViewController.swift */,
+				FA309BE424C8B9FA005BBF16 /* ZAOfferListViewController.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -679,6 +688,7 @@
 				CF4CC54B244F2A31003F6B35 /* APIClient+User.swift */,
 				CF4CC54D244F2AB0003F6B35 /* APIClient+Trip.swift */,
 				CF4CC551244F52F8003F6B35 /* APIClient+Shipment.swift */,
+				FA602FAF24C42123001B06F6 /* APIClient+Chat.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -812,6 +822,8 @@
 				FA61DE4324A9AF3A0050860F /* RightViewCell.xib */,
 				FA8C622524A31700001DA666 /* ZAUserTableViewCell.swift */,
 				FA8C622624A31700001DA666 /* ZAUserTableViewCell.xib */,
+				FA309BE624C8BD69005BBF16 /* ZAOfferListTableViewCell.swift */,
+				FA309BE724C8BD69005BBF16 /* ZAOfferListTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -900,6 +912,7 @@
 				CF539F88244D765300CE612E /* Shipments.storyboard in Resources */,
 				FA61DE4724A9AF3A0050860F /* RightViewCell.xib in Resources */,
 				CF539F7D244C9A2700CE612E /* Privacy.storyboard in Resources */,
+				FA309BE924C8BD69005BBF16 /* ZAOfferListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1002,9 +1015,11 @@
 				CF2DCCC223D9C9A30067EC7D /* ScrollViewExtention.swift in Sources */,
 				CF4CC54E244F2AB0003F6B35 /* APIClient+Trip.swift in Sources */,
 				CF2DCCA823D9815C0067EC7D /* ValidationObject.swift in Sources */,
+				FA602FB024C42124001B06F6 /* APIClient+Chat.swift in Sources */,
 				CFBF5178244DC41500345524 /* ZANotificationViewController.swift in Sources */,
 				CFD809602449D747009D7750 /* ZASignUpViewController.swift in Sources */,
 				CF2DCCC723D9CC5E0067EC7D /* StringExtention.swift in Sources */,
+				FA309BE524C8B9FB005BBF16 /* ZAOfferListViewController.swift in Sources */,
 				CFBF517C244DC43900345524 /* ZAShipmentsViewController.swift in Sources */,
 				CF2DCC7C23D95A190067EC7D /* Target.swift in Sources */,
 				CF8D518724632D3A004CC9A3 /* ZAPostedShipmentDetailViewController.swift in Sources */,
@@ -1077,6 +1092,7 @@
 				CF539F7F244CB1E200CE612E /* NavigationController.swift in Sources */,
 				CF4CC550244F44B6003F6B35 /* TripService.swift in Sources */,
 				CFA989A923D868FD005E76E8 /* UserService.swift in Sources */,
+				FA309BE824C8BD69005BBF16 /* ZAOfferListTableViewCell.swift in Sources */,
 				CF4CC54C244F2A31003F6B35 /* APIClient+User.swift in Sources */,
 				CF10C7B323D72CA20082602A /* ServiceType.swift in Sources */,
 				CF54C436245C340B00A00D70 /* ZAMyShipmentsViewController.swift in Sources */,

@@ -93,4 +93,10 @@ extension ZADashboardViewController {
         }
     }
     
+    
+    @IBAction func receivedOffer() {
+        push(viewController: ZAOfferListViewController.self, storyboard: R.storyboard.messages())
+
+    }
+    
 }

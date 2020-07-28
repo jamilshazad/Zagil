@@ -30,6 +30,11 @@ class ZAMyShipmentsViewController: ZAViewController {
         setupViewController()
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.loadShipments(status: "posted")
+    }
 
     // MARK: - Private Methods
     
@@ -43,7 +48,7 @@ class ZAMyShipmentsViewController: ZAViewController {
     private func setupViewController() {
         setupSegmentControl()
         setupTableView()
-        loadShipments()
+        loadShipments(status: "posted")
     }
     
     private func setupSegmentControl() {
@@ -73,9 +78,9 @@ class ZAMyShipmentsViewController: ZAViewController {
         }
     }
     
-    private func loadShipments() {
+    private func loadShipments(status: String) {
         showHud()
-        APIClient.getPostedShipments().done { [weak self] shipments in
+        APIClient.getPostedShipments(status: status).done { [weak self] shipments in
             guard let self = self else { return }
             self.hideHud()
             self.shipments = shipments
@@ -95,7 +100,7 @@ class ZAMyShipmentsViewController: ZAViewController {
 extension ZAMyShipmentsViewController {
     
     @IBAction private func segmentTapped(_ sender: MASegmentedControl) {
-        loadShipments()
+        loadShipments(status: sender.selectedSegmentIndex == 0 ? "posted":"onroute")
     }
     
 }

@@ -240,8 +240,15 @@ extension ZAAddShipmentViewController {
         dateLabel.text = sender.date.getString(of: .dd_MM_YYYY)
     }
     
+   
+    
     @objc
     private func postTripButtonTapped(_ sender: ZAButton) {
+        let userIsLogin = self.checkIfUserIsLogin()
+        if (!userIsLogin){
+            return
+        }
+        
         if validateData() {
             showHud()
             APIClient.addShipment(name: nameTextField.text!,

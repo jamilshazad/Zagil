@@ -60,9 +60,9 @@ extension APIClient {
         }
     }
     
-    class func getPostedShipments() -> Promise<[PostedShipment]> {
+    class func getPostedShipments(status: String) -> Promise<[PostedShipment]> {
         let iD = String(ZAUserDefaults.user.get()?.iD ?? -1)
-        let getPostedShipments = ShipmentService.getPostedShipments(iD: iD)
+        let getPostedShipments = ShipmentService.getPostedShipments(iD: iD, status: status)
         return Promise<[PostedShipment]> { seal in
             firstly {
                 NetworkManager.manager.request(getPostedShipments)
@@ -84,8 +84,9 @@ extension APIClient {
             firstly {
                 NetworkManager.manager.request(deletePostedShipment)
             }.then { json -> Promise<DeletePostedShipmentResponse> in
-                guard let array = json as? [JSON] else { throw ServiceError.badResponse }
-                return try decode(response: array)
+                guard let array = json as? [JSON], !array.isEmpty else { throw ServiceError.badResponse }
+                guard let result = array.first as? [String : JSON] else { throw ServiceError.badResponse }
+                return try decode(response: result)
             }.done { model in
                 seal.fulfill(model.isDeleted)
             }.catch { error in

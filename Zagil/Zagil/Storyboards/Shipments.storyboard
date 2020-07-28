@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dlL-mC-zsB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dlL-mC-zsB">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -75,13 +75,35 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvQ-uu-4Eg">
+                                <rect key="frame" x="39" y="683.66666666666663" width="336" height="60"/>
+                                <color key="backgroundColor" name="darkGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="gsj-dr-Snw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="18"/>
+                                <state key="normal" title="Received Offer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="receivedOffer" destination="zNl-QF-McX" eventType="touchUpInside" id="tJI-gh-5Xu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="MqX-oQ-gqp" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5hN-7L-vnH" secondAttribute="bottom" constant="40" id="7iE-ZO-q2s"/>
                             <constraint firstItem="5hN-7L-vnH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MqX-oQ-gqp" secondAttribute="top" constant="40" id="Bvs-mp-R65"/>
                             <constraint firstItem="5hN-7L-vnH" firstAttribute="centerX" secondItem="SKc-h8-lfN" secondAttribute="centerX" id="k1J-KD-bz6"/>
+                            <constraint firstItem="rvQ-uu-4Eg" firstAttribute="top" secondItem="5hN-7L-vnH" secondAttribute="bottom" constant="12" id="mdA-OD-pZe"/>
                             <constraint firstItem="5hN-7L-vnH" firstAttribute="width" secondItem="SKc-h8-lfN" secondAttribute="width" multiplier="0.85" id="mvF-ZG-p5H"/>
+                            <constraint firstItem="rvQ-uu-4Eg" firstAttribute="leading" secondItem="5hN-7L-vnH" secondAttribute="leading" constant="8" id="wrQ-bd-AIT"/>
+                            <constraint firstItem="rvQ-uu-4Eg" firstAttribute="trailing" secondItem="5hN-7L-vnH" secondAttribute="trailing" constant="-8" id="xTr-1Q-hax"/>
                             <constraint firstItem="5hN-7L-vnH" firstAttribute="centerY" secondItem="SKc-h8-lfN" secondAttribute="centerY" id="z5x-Sb-YbM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MqX-oQ-gqp"/>
@@ -1796,6 +1818,9 @@
         <image name="terms_conditions" width="16" height="20"/>
         <image name="trips" width="808" height="1008"/>
         <image name="weight" width="17" height="17"/>
+        <namedColor name="darkGreen">
+            <color red="0.0" green="0.70588235294117652" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="mediumGreen">
             <color red="0.035294117647058823" green="0.79607843137254897" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

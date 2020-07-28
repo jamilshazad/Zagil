@@ -43,11 +43,18 @@ class ZAViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let tabBarController = tabBarController as? ZATabBarViewController {
-            hidesBottomBarWhenPushed ? tabBarController.hideDashboardButton() : tabBarController.showDashboardButton()
-        }
+//        if let tabBarController = tabBarController as? ZATabBarViewController {
+//            hidesBottomBarWhenPushed ? tabBarController.hideDashboardButton() : tabBarController.showDashboardButton()
+//        }
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        if let tabBarController = tabBarController as? ZATabBarViewController {
+                 hidesBottomBarWhenPushed ? tabBarController.hideDashboardButton() : tabBarController.showDashboardButton()
+             }
+    }
     
     // MARK: - UIResponder
     
@@ -117,6 +124,15 @@ class ZAViewController: UIViewController {
         alertController.addAction(actionOK)
         alertController.preferredAction = actionOK
         present(alertController, animated: true, completion: nil)
+    }
+    
+    public func checkIfUserIsLogin()-> Bool{
+      let userInfo = ZAUserDefaults.user.get()
+        if userInfo == nil {
+            showAlert(message: "Please login first to proceed.")
+            return false
+        }
+        return true
     }
     
     public func addUnderDevelopmentLabel() {

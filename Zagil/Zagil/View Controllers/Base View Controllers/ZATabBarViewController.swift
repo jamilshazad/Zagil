@@ -83,8 +83,9 @@ class ZATabBarViewController: UITabBarController {
     
     public func showDashboardButton() {
         self.dashboardButton.isHidden = false
+        self.view.bringSubviewToFront(self.dashboardButton)
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.50) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) { [weak self] in
             guard let self = self else { return }
             self.view.bringSubviewToFront(self.dashboardButton)
         }

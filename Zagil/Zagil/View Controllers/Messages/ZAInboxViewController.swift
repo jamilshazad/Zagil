@@ -67,12 +67,14 @@ class ZAInboxViewController: ZAViewController {
    
     
     func loadInboxMessage() {
-          
+        let userIsLogin = self.checkIfUserIsLogin()
+        if (!userIsLogin){
+            return
+        }
         chats.removeAll()
         ZARealTimeDatabaseManager.shared.getInboxMessages(completionHandler: { (snapshot) in
             if snapshot.childrenCount > 0 {
                
-                
                 for messages in snapshot.children.allObjects as! [DataSnapshot] {
                     let userSnap = messages
                     let list_user_id = userSnap.key
@@ -95,7 +97,7 @@ class ZAInboxViewController: ZAViewController {
                         userName = userInfo?["name"] as! String
                         userImage = userInfo?["image"] as! String
                         if let name = userName, let image = userImage, let lastUserMessage = lastMessage  {
-                             let chatObject = Chat(title: name, imageName: image, latestMessage: lastUserMessage, sender: "")
+                             let chatObject = Chat(title: name, imageName: image, latestMessage: lastUserMessage, sender: list_user_id)
                              self.chats.append(chatObject)
                         }
                       self.tableView.reloadData()
@@ -150,11 +152,11 @@ extension ZAInboxViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-//        push(viewController: ZAPostedShipmentDetailViewController.self, storyboard: R.storyboard.shipments()) { [weak self] detailVC in
-//            guard let self = self,
-//                let shipment = self.shipments[safe: indexPath.row] else { return }
-//            detailVC.shipment = shipment
-//        }
+        guard let chat = chats[safe: indexPath.row] else { return }
+        let senderData = SenderFeed(iD: 0, name: chat.title, UID: Int(chat.sender! as String)!, source: "", destination: "", weight: "", weightUnit: "", size: "", sizeUnit: "", description: "", price: "", priceUnit: "")
+        self.push(viewController: ZAConverstationViewController.self, storyboard: R.storyboard.messages(), configure: { (vC) in
+            vC.senderData = senderData
+        })
     }
    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

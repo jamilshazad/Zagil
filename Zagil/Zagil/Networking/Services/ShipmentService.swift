@@ -15,7 +15,7 @@ enum ShipmentService: ServiceType {
     
     case getShipments(iD: String, date: String)
     case addShipment(iD: String, type: String, recieverName: String, recieverPhone: String, from: String, to: String, date: String, weight: String, weightUnit: String, size: String, sizeUnit: String, description: String, price: String, priceUnit: String)
-    case getPostedShipments(iD: String)
+    case getPostedShipments(iD: String, status: String)
     case deletePostedShipment(iD: String, UID: String)
     case updatePostedShipment(iD: String, UID: String, weight: String, weightUnit: String, size: String, sizeUnit: String, description: String, price: String, priceUnit: String)
     
@@ -63,9 +63,9 @@ enum ShipmentService: ServiceType {
                           "version" : ""]
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
             
-        case .getPostedShipments(let iD):
+        case .getPostedShipments(let iD, let status):
             let params = ["uid" : iD,
-                          "status" : "posted"]
+                          "status" : status]
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
             
         case .deletePostedShipment(let iD, let UID):

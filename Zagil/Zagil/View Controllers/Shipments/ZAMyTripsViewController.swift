@@ -30,6 +30,10 @@ class ZAMyTripsViewController: ZAViewController {
         setupViewController()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.loadTrips(status: "posted")
+    }
 
     // MARK: - Private Methods
     
@@ -43,7 +47,7 @@ class ZAMyTripsViewController: ZAViewController {
     private func setupViewController() {
         setupSegmentControl()
         setupTableView()
-        loadTrips()
+        loadTrips(status: "posted")
     }
     
     private func setupSegmentControl() {
@@ -73,9 +77,9 @@ class ZAMyTripsViewController: ZAViewController {
         }
     }
     
-    private func loadTrips() {
+    private func loadTrips(status: String) {
         showHud()
-        APIClient.getPostedTrips().done { [weak self] trips in
+        APIClient.getPostedTrips(status: status).done { [weak self] trips in
             guard let self = self else { return }
             self.hideHud()
             self.trips = trips
@@ -95,7 +99,7 @@ class ZAMyTripsViewController: ZAViewController {
 extension ZAMyTripsViewController {
     
     @IBAction private func segmentTapped(_ sender: MASegmentedControl) {
-        loadTrips()
+        loadTrips(status: sender.selectedSegmentIndex == 0 ? "posted":"onroute")
     }
     
 }

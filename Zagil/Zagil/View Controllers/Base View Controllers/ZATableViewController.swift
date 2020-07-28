@@ -97,6 +97,15 @@ class ZATableViewController: UITableViewController {
         MBProgressHUD.hide(for: view, animated: true)
     }
     
+    public func checkIfUserIsLogin()-> Bool{
+         let userInfo = ZAUserDefaults.user.get()
+           if userInfo == nil {
+               showAlert(message: "Please login first to proceed.")
+               return false
+           }
+           return true
+       }
+    
     public func showAlert(_ title: String = "Zagil", message: String, completion: EmptyCompletion? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let actionOK = UIAlertAction(title: "OK", style: .default) { [weak self] _ in

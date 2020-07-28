@@ -38,3 +38,6 @@ struct SenderFeed: Codable {
         case priceUnit
     }
 }
+
+
+

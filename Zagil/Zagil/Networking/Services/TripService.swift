@@ -15,7 +15,7 @@ enum TripService: ServiceType {
     
     case getTrips(iD: String, date: String)
     case addTrip(iD: String, from: String, to: String, date: String, weight: String, weightUnit: String, size: String, sizeUnit: String, description: String, price: String, priceUnit: String)
-    case getPostedTrips(iD: String)
+    case getPostedTrips(iD: String, status: String)
     case deletePostedTrip(iD: String, UID: String)
     case updatePostedTrip(iD: String, UID: String, weight: String, weightUnit: String, size: String, sizeUnit: String, description: String, price: String, priceUnit: String)
     
@@ -60,9 +60,9 @@ enum TripService: ServiceType {
                           "version" : ""]
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
             
-        case .getPostedTrips(let iD):
+        case .getPostedTrips(let iD, let status):
             let params = ["uid" : iD,
-                          "status" : "posted"]
+                          "status" :status]
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
             
         case .deletePostedTrip(let iD, let UID):

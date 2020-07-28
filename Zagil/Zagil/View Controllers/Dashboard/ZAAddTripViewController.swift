@@ -249,6 +249,10 @@ extension ZAAddTripViewController {
     
     @objc
     private func postTripButtonTapped(_ sender: ZAButton) {
+        let userIsLogin = self.checkIfUserIsLogin()
+        if (!userIsLogin){
+            return
+        }
         if validateData() {
             showHud()
             APIClient.addTrip(from: fromTextField.text!,

@@ -51,4 +51,9 @@ extension ZAShipmentsViewController {
         push(viewController: ZASettingsViewController.self, storyboard: R.storyboard.shipments())
     }
     
+    @IBAction func receivedOffer() {
+           push(viewController: ZAOfferListViewController.self, storyboard: R.storyboard.messages())
+           
+       }
+    
 }

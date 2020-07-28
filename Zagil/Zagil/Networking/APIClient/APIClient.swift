@@ -29,6 +29,7 @@ class APIClient {
                 let model = try decoder.decode(T.self, from: data)
                 seal.fulfill(model)
             } catch(let error) {
+                print(error.localizedDescription)
                 seal.reject(error)
             }
         }

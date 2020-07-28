@@ -57,9 +57,9 @@ extension APIClient {
         }
     }
     
-    class func getPostedTrips() -> Promise<[PostedTrip]> {
+    class func getPostedTrips(status: String) -> Promise<[PostedTrip]> {
         let iD = String(ZAUserDefaults.user.get()?.iD ?? -1)
-        let getPostedTrips = TripService.getPostedTrips(iD: iD)
+        let getPostedTrips = TripService.getPostedTrips(iD: iD, status: status)
         return Promise<[PostedTrip]> { seal in
             firstly {
                 NetworkManager.manager.request(getPostedTrips)
@@ -81,8 +81,9 @@ extension APIClient {
             firstly {
                 NetworkManager.manager.request(deletePostedTrip)
             }.then { json -> Promise<DeletePostedTripResponse> in
-                guard let array = json as? [JSON] else { throw ServiceError.badResponse }
-                return try decode(response: array)
+                guard let array = json as? [JSON], !array.isEmpty else { throw ServiceError.badResponse }
+                guard let result = array.first as? [String : JSON] else { throw ServiceError.badResponse }
+                return try decode(response: result)
             }.done { model in
                 seal.fulfill(model.isDeleted)
             }.catch { error in
@@ -106,8 +107,9 @@ extension APIClient {
             firstly {
                 NetworkManager.manager.request(updatePostedTrip)
             }.then { json -> Promise<UpdatePostedTripResponse> in
-                guard let array = json as? [JSON] else { throw ServiceError.badResponse }
-                return try decode(response: array)
+                guard let array = json as? [JSON], !array.isEmpty else { throw ServiceError.badResponse }
+                guard let result = array.first as? [String : JSON] else { throw ServiceError.badResponse }
+                return try decode(response: result)
             }.done { model in
                 seal.fulfill(model.isUpdated)
             }.catch { error in
