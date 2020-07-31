@@ -14,7 +14,7 @@ enum TripService: ServiceType {
     // MARK: - Services
     
     case getTrips(iD: String, date: String)
-    case addTrip(iD: String, from: String, to: String, date: String, weight: String, weightUnit: String, size: String, sizeUnit: String, description: String, price: String, priceUnit: String)
+    case addTrip(iD: String, from: String, to: String, departureData: String, arrivalDate: String,  weight: String, weightUnit: String, size: String, sizeUnit: String, description: String, price: String, priceUnit: String)
     case getPostedTrips(iD: String, status: String)
     case deletePostedTrip(iD: String, UID: String)
     case updatePostedTrip(iD: String, UID: String, weight: String, weightUnit: String, size: String, sizeUnit: String, description: String, price: String, priceUnit: String)
@@ -45,11 +45,12 @@ enum TripService: ServiceType {
             let params = ["id": iD,
                           "date" : date]
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
-        case .addTrip(let iD, let from, let to, let date, let weight, let weightUnit, let size, let sizeUnit, let description, let price, let priceUnit):
+        case .addTrip(let iD, let from, let to, let departureData, let arrivalDate, let weight, let weightUnit, let size, let sizeUnit, let description, let price, let priceUnit):
             let params = ["uid" : iD,
                           "source" : from,
                           "destination" : to,
-                          "date" : date,
+                          "date" : departureData,
+                          "endDate": arrivalDate,
                           "weight" : weight,
                           "weightUnit" : weightUnit,
                           "size" : size,

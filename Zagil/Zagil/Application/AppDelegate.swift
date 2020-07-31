@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         // Setup Facebook SDK
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
+        setupRootViewController()
         // Setup DropDown
         DropDown.startListeningToKeyboard()
         

@@ -17,6 +17,7 @@ class ZAAddTripViewController: ZATableViewController {
     
     private var isHiddenDatePicker: Bool = true
     private var isHiddenArrivalDatePicker: Bool = true
+    var selectCurrency = ""
 
     @IBOutlet private var fromTextField: ZATextField!
     @IBOutlet private var toTextField: ZATextField!
@@ -137,6 +138,7 @@ class ZAAddTripViewController: ZATableViewController {
         priceUnitDropDown.selectionAction = { [weak self] _, item in
             guard let self = self else { return }
             self.priceUnitTextField.text = item.getCurrencyOfString()
+            self.selectCurrency = item;
         }
     }
     
@@ -257,14 +259,15 @@ extension ZAAddTripViewController {
             showHud()
             APIClient.addTrip(from: fromTextField.text!,
                               to: toTextField.text!,
-                              date: dateLabel.text!,
+                              departureDate: dateLabel.text!,
+                              arrivalDate: arrivalDateLabel.text!,
                               weight: weightTextField.text!,
                               weightUnit: weightUnitTextField.text!,
                               size: sizeTextField.text!,
                               sizeUnit: sizeUnitTextField.text!,
                               description: descriptionTextView.text!,
                               price:   priceTextField.text!,
-                              priceUnit: priceUnitTextField.text!).done { [weak self] _ in
+                              priceUnit: self.selectCurrency).done { [weak self] _ in
                                 guard let self = self else { return }
                                 self.hideHud()
                                 self.showAlert("Success", message: "Trip has been Posted!") { [weak self] in

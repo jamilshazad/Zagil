@@ -30,12 +30,13 @@ extension APIClient {
         }
     }
     
-    class func addTrip(from: String, to: String, date: String, weight: String, weightUnit: String, size: String, sizeUnit: String, description: String, price: String, priceUnit: String) -> Promise<Empty> {
+    class func addTrip(from: String, to: String, departureDate: String, arrivalDate: String,  weight: String, weightUnit: String, size: String, sizeUnit: String, description: String, price: String, priceUnit: String) -> Promise<Empty> {
         let iD = String(ZAUserDefaults.user.get()?.iD ?? -1)
         let addTrip = TripService.addTrip(iD: iD,
                                           from: from,
                                           to: to,
-                                          date: date,
+                                          departureData: departureDate,
+                                          arrivalDate: arrivalDate,
                                           weight: weight,
                                           weightUnit: weightUnit,
                                           size: size,
